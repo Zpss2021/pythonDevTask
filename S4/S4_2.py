@@ -12,4 +12,5 @@ def char_statistic(dest_str):
     return tuple(ret)
 
 
-print(char_statistic('ehllo WROLD'))
+obj_str = 'ehllo WROLD'
+print('统计字符串{0}: 大写字母{1}个, 小写字母{2}个'.format(obj_str, *char_statistic(obj_str)))

@@ -13,4 +13,15 @@ def calculate(*nums):
     return tuple(ret)
 
 
-print(calculate(1, 2, 3, 4, 5, 6, 7))
+arr = []
+while True:
+    tmp = input('请输入数字，输入q结束:')
+    if tmp.isdigit():
+        arr.append(eval(tmp))
+    elif tmp == 'q':
+        result = calculate(*arr)
+        print('平均值为{0}, 大于平均值的所有数为：{1}'.format(result[0], result[1:]))
+        break
+    else:
+        print('输入错误，请重新输入！')
+        continue
